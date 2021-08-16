@@ -1,6 +1,7 @@
 import React from "react";
 import AboutUs from "./pages/AboutUs";
 import { createGlobalStyle } from "styled-components";
+import Featured from "./components/Featured";
 
 const GlobalStyle = createGlobalStyle`
    * {
@@ -14,7 +15,8 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <AboutUs />
+      {/* <AboutUs /> */}
+      <Featured/>
     </div>
   );
 }
