@@ -1,6 +1,8 @@
 import React from "react";
 import AboutUs from "./pages/AboutUs";
 import { createGlobalStyle } from "styled-components";
+import Intro from "./pages/Intro";
+import Ads from "./pages/Ads";
 
 const GlobalStyle = createGlobalStyle`
    * {
@@ -14,7 +16,9 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle />
+      <Intro />
       <AboutUs />
+      <Ads />
     </div>
   );
 }

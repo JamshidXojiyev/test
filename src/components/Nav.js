@@ -33,7 +33,7 @@ const Nav = () => {
         </li>
         <li>
           <button>
-            <FontAwesomeIcon icon={faPlus} /> Post your Ad
+            <FontAwesomeIcon icon={faPlus} /> <span>Post your Ad</span>
           </button>
         </li>
       </ul>
@@ -50,7 +50,10 @@ const StyledNav = styled.nav`
   a {
     color: white;
     text-decoration: none;
-    font-size: 21px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    font-family: "Inter", sans-serif;
   }
   ul {
     list-style: none;
@@ -65,6 +68,10 @@ const StyledNav = styled.nav`
     width: 155px;
     height: 50px;
     cursor: pointer;
+    font-family: "Inter", sans-serif;
+    span {
+      margin-left: 5px;
+    }
   }
   li {
     padding-left: 2.25rem;
@@ -73,8 +80,11 @@ const StyledNav = styled.nav`
 
 const StyledH1 = styled.h1`
   a {
-    font-size: 50px;
-    font-weight: 700;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 45px;
+    font-family: "Quicksand", sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   }
 `;
 

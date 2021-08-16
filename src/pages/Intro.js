@@ -1,15 +1,15 @@
 import React from "react";
 // Page Components
 import AboutSection from "../components/AboutSection";
-import CategorySection from "../components/CategorySection";
 import Nav from "../components/Nav";
 import back from "../assets/background.jpg";
 import styled from "styled-components";
 
-const AboutUs = () => {
+const Intro = () => {
   return (
     <Wrapper>
-      <CategorySection />
+      <Nav />
+      <AboutSection />
     </Wrapper>
   );
 };
@@ -17,7 +17,7 @@ const AboutUs = () => {
 const Wrapper = styled.div`
   position: relative;
   height: 585px;
-  background: #fff;
+  background: url(${back}) no-repeat center center/cover;
 `;
 
-export default AboutUs;
+export default Intro;
