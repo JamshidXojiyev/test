@@ -2,7 +2,9 @@ import React from "react";
 import AboutUs from "./pages/AboutUs";
 import { createGlobalStyle } from "styled-components";
 import Intro from "./pages/Intro";
+import Adsjr from "./components/common/Adsjr";
 import Ads from "./pages/Ads";
+import Statistics from "./pages/Statistics";
 
 const GlobalStyle = createGlobalStyle`
    * {
@@ -19,6 +21,7 @@ function App() {
       <Intro />
       <AboutUs />
       <Ads />
+      <Statistics />
     </div>
   );
 }

@@ -16,7 +16,8 @@ const AboutUs = () => {
 
 const Wrapper = styled.div`
   position: relative;
-  height: 585px;
+  padding: 40px 0;
+  padding-bottom: 80px;
   background: #fff;
 `;
 
