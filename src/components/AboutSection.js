@@ -10,6 +10,8 @@ import {
 import styled from "styled-components";
 
 const AboutSection = () => {
+  const [input, setInput] = React.useState(null);
+
   return (
     <Wrapper>
       <StyledDi>
@@ -48,7 +50,12 @@ const AboutSection = () => {
                 </svg>
               </span>
 
-              <input placeholder="Select Location" type="text" />
+              <input
+                onFocus={() => setInput(1)}
+                onBlur={() => setInput(null)}
+                placeholder="Select Location"
+                type="text"
+              />
             </div>
             <div className="category-input">
               <span>
@@ -75,7 +82,12 @@ const AboutSection = () => {
                 </svg>
               </span>
 
-              <input placeholder="Select Category" type="text" />
+              <input
+                onFocus={() => setInput(2)}
+                onBlur={() => setInput(null)}
+                placeholder="Select Category"
+                type="text"
+              />
             </div>
             <div className="text-input">
               <span>
@@ -119,6 +131,68 @@ const AboutSection = () => {
             </button>
           </StyledBut>
         </div>
+        {input === 1 && (
+          <LocationStyles>
+            <p>
+              <a href="#">Андижанская Область</a>
+            </p>
+            <p>
+              <a href="#">Бухарская Область</a>
+            </p>
+            <p>
+              <a href="#">Джизакская Область</a>
+            </p>
+            <p>
+              <a href="#">Каракалпакстан</a>
+            </p>
+            <p>
+              <a href="#">Кашкадарьинская область</a>
+            </p>
+            <p>
+              <a href="#">Навоийская область</a>
+            </p>
+            <p>
+              <a href="#">Наманганская область </a>
+            </p>
+            <p>
+              <a href="#">Самаркандская Область</a>
+            </p>
+            <p>
+              <a href="#">Сурхандарьинская область</a>
+            </p>
+            <p>
+              <a href="#">Сырдарьинская область</a>
+            </p>
+            <p>
+              <a href="#">Ташкентская область</a>
+            </p>
+            <p>
+              <a href="#">Ферганская область</a>
+            </p>
+            <p>
+              <a href="#">Хорезмская область</a>
+            </p>
+          </LocationStyles>
+        )}
+        {input === 2 && (
+          <LocationSty>
+            <p>
+              <a href="#">Buisness & Industry</a>
+            </p>
+            <p>
+              <a href="#">Education</a>
+            </p>
+            <p>
+              <a href="#">Electronics</a>
+            </p>
+            <p>
+              <a href="#">Property</a>
+            </p>
+            <p>
+              <a href="#">Car & Automobiles</a>
+            </p>
+          </LocationSty>
+        )}
       </StyledDi>
     </Wrapper>
   );
@@ -157,11 +231,10 @@ const StyledD = styled.div`
 const SearchInputs = styled.div`
   display: flex;
   background: white;
-  padding: 10px 20px;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  width: 750px;
+  width: 1000px;
   height: 54px;
   color: #999999;
   span {
@@ -189,6 +262,9 @@ const SearchInputs = styled.div`
       font-weight: 500;
       line-height: 15px;
       margin-left: 3px;
+      text-transform: capitalize;
+      .text-input {
+      }
 
       &:focus {
         outline: none;
@@ -211,6 +287,60 @@ const StyledBut = styled.div`
     line-height: 16px;
     span {
       margin-left: 8px;
+    }
+  }
+`;
+
+const LocationStyles = styled.div`
+  z-index: 400;
+  position: absolute;
+  background: white;
+  padding: 20px;
+  padding-top: 0;
+  padding-right: 20px;
+  p {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 30px;
+    transition: all 0.5s ease;
+    &:hover {
+      background: #f85c70;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: #999999;
+    font-family: "Inter", sans-serif;
+    &:hover {
+      color: white;
+    }
+  }
+`;
+
+const LocationSty = styled.div`
+  z-index: 400;
+  position: absolute;
+  background: white;
+  padding: 55px;
+  padding-top: 0;
+  p {
+    text-decoration: none;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 30px;
+    transition: all 0.5s ease;
+    &:hover {
+      background: #f85c70;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: #999999;
+    font-family: "Inter", sans-serif;
+    &:hover {
+      color: white;
     }
   }
 `;

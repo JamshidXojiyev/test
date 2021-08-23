@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAAA,wCAEE,iBAAkB,CAClB,OAAQ,CACR,WACF","file":"main.420b2a4a.chunk.css","sourcesContent":[".slides .slick-prev,\r\n.slides .slick-next {\r\n  position: absolute;\r\n  top: 50%;\r\n  z-index: 300;\r\n}\r\n"]}

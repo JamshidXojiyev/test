@@ -41,7 +41,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 100px 0;
-  margin-bottom: 200px;
+  margin-bottom: 43px;
 
   div.first {
     display: flex;

@@ -1,28 +1,40 @@
 import React from "react";
-import AboutUs from "./pages/AboutUs";
 import { createGlobalStyle } from "styled-components";
-import Intro from "./pages/Intro";
-import Adsjr from "./components/common/Adsjr";
-import Ads from "./pages/Ads";
-import Statistics from "./pages/Statistics";
+import Home from "./pages/parts/Home";
+import Item from "./pages/parts/Item";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const GlobalStyle = createGlobalStyle`
    * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box
+     padding: 0
    }
+
+   a {
+     text-decoration: none;
+   }
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #F5F7FA;
+}
 `;
 
 function App() {
   return (
-    <div className="App">
-      <GlobalStyle />
-      <Intro />
-      <AboutUs />
-      <Ads />
-      <Statistics />
-    </div>
+    <Router>
+      <div className="App">
+        <GlobalStyle />
+        <Switch>
+          <Route path="/item">
+            <Item />
+          </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
